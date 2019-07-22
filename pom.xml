@@ -28,7 +28,7 @@
     </parent>
 
     <artifactId>jboss-ejb-client</artifactId>
-    <version>4.0.12.Final_discovery_node_selector-SNAPSHOT</version>
+    <version>4.0.12.Final_discovery_node_selector-bd52353</version>
 
     <name>JBoss EJB client</name>
     <description>Client library for EJB applications working against Wildfly</description>
@@ -111,6 +111,24 @@
                     </execution>
                 </executions>
             </plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<descriptors>
+						<descriptor>assembly-descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
         </plugins>
     </build>
 
