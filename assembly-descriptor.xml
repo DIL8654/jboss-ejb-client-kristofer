@@ -13,8 +13,14 @@
 	  <filtered>true</filtered>
       <includes>
         <include>**.jar</include>
-		<include>**.pom</include>
       </includes>
     </fileSet>
-	</fileSets>
+	<files>
+		<file>
+			<source>pom.xml</source>
+			<outputDirectory>/</outputDirectory>
+			<destName>${artifactId}-${version}.pom</destName>
+		</file>
+	</files>
+
 </assembly>
